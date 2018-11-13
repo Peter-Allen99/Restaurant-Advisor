@@ -1,0 +1,4 @@
+starbucks;Starbucks
+pizzahut;Pizza Hut
+mcdonalds;McDonald's
+olivegarden;Olive Garden

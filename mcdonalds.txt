@@ -1,0 +1,11 @@
+McDonald's
+152 Magnolia Street
+(414)-933-2824
+mcdonalds@mcdonalds.com
+9-5 every day
+American
+Fast Food
+$1-$5
+Burger
+$1.5
+1;200.0
