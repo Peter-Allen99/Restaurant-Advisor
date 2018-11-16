@@ -134,6 +134,19 @@ public class RatingWriter {
 		reWrite();
 		sc.close();
 	}
+	
+	public void addReviewCode(String reviewI, String ratingI) throws IOException {
+		String comTest = company + ".txt";
+		if (existCheck(comTest) == false) {
+			System.out.println("New company");
+			newFile(company);
+		}
+		String review = reviewI;
+		String rating = ratingI;
+		String fullReview = rating + ";" + review;
+		appendStrToFile(fullReview);
+		reWrite();
+	}
 
 	// checks if the text file exists
 	public static boolean existCheck(String s) {
