@@ -22,6 +22,8 @@ import javax.swing.*;
  * 	Creator: Matt Stark
  */
 
+//The username is "restaurant" and the password is "login"
+
 
 public class loginGUI extends JFrame {
 	
@@ -40,11 +42,12 @@ public class loginGUI extends JFrame {
 	}
 
 	loginGUI() {
-		JFrame login; // the login frame
+		//initializing the login frame
+		JFrame login; 
 		
 		//creating the login frame
 		login = new JFrame("Login");
-		login.setSize(500, 200);
+		login.setSize(350, 200);
 		login.setLocationRelativeTo(null);
 		login.setLayout(null);
 		login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -60,12 +63,6 @@ public class loginGUI extends JFrame {
 		pass.setSize(pass.getPreferredSize());
 		pass.setLocation(30, 60);
 		login.add(pass);
-		
-		//creating the username and password location label
-		info = new JLabel("The Username and Password is in the README");
-		info.setSize(info.getPreferredSize());
-		info.setLocation(100,100);
-		login.add(info);
 		
 		//creating the username textfield
 		username = new JTextField();
@@ -89,7 +86,7 @@ public class loginGUI extends JFrame {
 		//creating the enter button
 		enter = new JButton("Enter");
 		enter.setSize(enter.getPreferredSize());
-		enter.setLocation(30,100);
+		enter.setLocation(30,110);
 		login.add(enter);
 		
 		//making the window visible and passing onto the validator method
@@ -105,8 +102,8 @@ public class loginGUI extends JFrame {
 				u = username.getText();
 				p = password.getText();
 				
-				//if the username and the password are correct move to the main GUI class
-				if (u.equals("shitty") && p.equals("login")) {
+				//if the username and the password are correct move to the main GUItest class
+				if (u.equals("restaurant") && p.equals("login")) {
 					GUItest correct = new GUItest();
 					correct.setVisible(true);
 					dispose();
@@ -120,7 +117,6 @@ public class loginGUI extends JFrame {
 					username.requestFocus();
 				}
 			}
-		}
-		);
+		});
 	}
 }
