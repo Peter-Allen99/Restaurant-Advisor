@@ -1,4 +1,4 @@
-package guiTest;
+package clean;
 
 import java.awt.event.*; 
 import javax.swing.*;
@@ -25,8 +25,9 @@ import javax.swing.*;
 //The username is "restaurant" and the password is "login"
 
 
-public class loginGUI extends JFrame {
+public class loginGUI extends JPanel {
 	
+	private static final long serialVersionUID = 1L;
 	String u; // the user inputed username
 	String p; // the user inputed password
 	JTextField username; // the username field
@@ -35,11 +36,6 @@ public class loginGUI extends JFrame {
 	JLabel pass; // the "Enter password" text on the screen
 	JLabel info; // where to find the username and password
 	JButton enter; // the enter button
-	
-	
-	public static void main(String args[]) {
-		new loginGUI();
-	}
 
 	loginGUI() {
 		//initializing the login frame
@@ -104,9 +100,9 @@ public class loginGUI extends JFrame {
 				
 				//if the username and the password are correct move to the main GUItest class
 				if (u.equals("restaurant") && p.equals("login")) {
-					GUItest correct = new GUItest();
+					RestaurantGUI correct = new RestaurantGUI();
 					correct.setVisible(true);
-					dispose();
+					//dispose();
 				}
 				
 				//if the username and password are incorrect display an incorrect message
