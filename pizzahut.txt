@@ -1,11 +1,11 @@
 Pizza Hut
-123 N. 17th street
-(414)-123-4567
-pizzahut@pizzahut.com
-9-5 everyday
+1840 S 15th Street
+(414)-643-6200
+pizzahut.com
+1000-0000
 Pizza
 Fast Food
-$7-$12
-Pizza
-$10
+$7-$17
+Large 2-Topping,Meat Lovers Pizza,Pepperoni Pizza
+$7.99,$15.99,$13.78
 1;5.0

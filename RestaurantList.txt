@@ -2,3 +2,11 @@ starbucks;Starbucks
 pizzahut;Pizza Hut
 mcdonalds;McDonald's
 olivegarden;Olive Garden
+rockbottom;Rock Bottom Restaurant & Brewery
+sobelmans;Sobelmans
+qdoba;Qdoba
+thecaptialgrille;The Capital Grille
+madersrestaurant;Mader's Restaurant
+cafebenelux;Cafe Benelux
+realchili;Real Chili
+safehouse;SafeHouse
