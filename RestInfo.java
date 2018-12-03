@@ -16,6 +16,8 @@ public class RestInfo extends JFrame implements ActionListener {
 	public String output = "";
 
 	JLabel L = new JLabel("");
+	
+	
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	JComboBox cmbMessageList = new JComboBox(messageStrings);
@@ -60,6 +62,11 @@ public class RestInfo extends JFrame implements ActionListener {
 		options.setSize(600, 20);
 		options.setFont(new Font("Serif", Font.BOLD, 20));
 		add(options);
+		
+		JLabel out = new JLabel("output");
+		out.setLocation(50, 240);
+		out.setSize(out.getPreferredSize());
+		add(out);
 
 		// The Enter Button
 		on = new JButton("Search");
@@ -67,8 +74,6 @@ public class RestInfo extends JFrame implements ActionListener {
 		on.setLocation(50, 180);
 		on.setSize(200, 30);
 		on.addActionListener(new ActionListener() {
-
-			// ===========================================
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// JButton cb = (JButton) e.getSource();
@@ -76,7 +81,8 @@ public class RestInfo extends JFrame implements ActionListener {
 				indexString = (String) cmbMessageList4.getSelectedItem();
 				ResInfo RI = new ResInfo("", RU.getShortName2(resString));
 				output = RI.GetIndex(indexString);
-				System.out.println(output);
+				out.setText(output);
+				out.setSize(out.getPreferredSize());
 				L.setText(output);
 			}
 		});
@@ -86,7 +92,7 @@ public class RestInfo extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-
+		
 	}
 
 	public static String[] arrayFull(String[] array) {

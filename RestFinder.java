@@ -22,10 +22,12 @@ public class RestFinder extends JFrame implements ActionListener {
 	JComboBox cmbMessageList5 = new JComboBox(cuisine);
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	JComboBox cmbMessageList6 = new JComboBox(options);
+	
+	JLabel out = new JLabel("");
 
 	RestFinder() {
 		super("Restaurant Finder");
-		setSize(325, 350);
+		setSize(550, 350);
 		setResizable(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -70,6 +72,11 @@ public class RestFinder extends JFrame implements ActionListener {
 		options.setLocation(50, 160);
 		options.setSize(options.getPreferredSize());
 		add(options);
+		
+		
+		out.setLocation(50, 240);
+		out.setSize(out.getPreferredSize());
+		add(out);
 
 		setVisible(true);
 	}
@@ -85,18 +92,39 @@ public class RestFinder extends JFrame implements ActionListener {
 
 			if (resString.equals("Venue Check")) {
 				list1 = RS.venueSearch((String) cmbMessageList3.getSelectedItem());
-				System.out.println(list1);
+				StringBuilder sb = new StringBuilder();
+				for(String s : list1) {
+					sb.append(s);
+					sb.append("\t");
+					sb.append(" ");
+				}
+				out.setText(sb.toString());
+				out.setSize(out.getPreferredSize());
 			}
 
 			if (resString.equals("Cuisine Check")) {
 				list2 = RS.cuisineSearch((String) cmbMessageList5.getSelectedItem());
-				System.out.println(list2);
+				StringBuilder sb = new StringBuilder();
+				for(String s : list2) {
+					sb.append(s);
+					sb.append("\t");
+					sb.append(" ");
+				}
+				out.setText(sb.toString());
+				out.setSize(out.getPreferredSize());
 			}
 			if (resString.equals("Compare Both")) {
 				list1 = RS.venueSearch((String) cmbMessageList3.getSelectedItem());
 				list2 = RS.cuisineSearch((String) cmbMessageList5.getSelectedItem());
 				list3 = ResSearch.compareRes(list1, list2);
-				System.out.println(list3);
+				StringBuilder sb = new StringBuilder();
+				for(String s : list3) {
+					sb.append(s);
+					sb.append("\n");
+					sb.append(" ");
+				}
+				out.setText(sb.toString());
+				out.setSize(out.getPreferredSize());
 			}
 			// ArrayList<String> rest = TU.getRes(resString);
 			// System.out.println(rest);
